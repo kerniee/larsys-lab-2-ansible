@@ -1,0 +1,8 @@
+- hosts: yandex
+  vars:
+    ntp_timezone: Europe/Moscow
+  roles:
+    - geerlingguy.ntp
+    - geerlingguy.docker
+    - roles/deploy_app
+  become: true
